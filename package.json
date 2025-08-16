@@ -1,0 +1,42 @@
+{
+    "name": "npmtidy",
+    "version": "0.0.1",
+    "description": "A CLI tool for cleaning and organizing Node.js projects. Remove unused dependencies, update outdated packages, and keep your package.json tidy",
+    "author": "xcfio",
+    "homepage": "https://github.com/xcfio/npmtidy#readme",
+    "main": "out/index.js",
+    "license": "MIT",
+    "scripts": {
+        "fmt": "prettier --config=.prettierrc --write src/",
+        "lint": "prettier --config=.prettierrc --check src/",
+        "build": "(node --eval \"require('node:fs').rmSync('out', { recursive: true, force: true })\" || true) && tsc",
+        "test": "tsc --noEmit",
+        "dev": "tsc --watch"
+    },
+    "keywords": [
+        "tidy",
+        "npmtidy"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xcfio/npmtidy"
+    },
+    "bugs": {
+        "url": "https://github.com/xcfio/npmtidy/issues",
+        "email": "SoftwareXPlus@gmail.com"
+    },
+    "funding": {
+        "type": "patreon",
+        "url": "https://www.patreon.com/xcfio"
+    },
+    "publishConfig": {
+        "access": "public",
+        "tag": "latest"
+    },
+    "dependencies": {
+        "colorette": "^2.0.20"
+    },
+    "devDependencies": {
+        "@types/node": "^24.0.14"
+    }
+}
