@@ -1,0 +1,5 @@
+allowBuilds:
+  lefthook: true
+
+minimumReleaseAgeExclude:
+  - cosmiconfig@9.0.2

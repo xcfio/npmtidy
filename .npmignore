@@ -1,5 +1,6 @@
 node_module/
 .github/
+.vscode/
 src/
 .gitignore
 .prettierignore
@@ -7,3 +8,4 @@ src/
 tsconfig.json
 *.test.js
 *.test.d.ts
+*.config.ts

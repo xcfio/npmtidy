@@ -1,0 +1,15 @@
+commit-msg:
+    commands:
+        lint-commit-msg:
+            run: pnpm exec commitlint --color=false --edit {1}
+
+pre-commit:
+    parallel: true
+    commands:
+        format:
+            priority: 1
+            run: node --run fmt -- --no-color
+            stage_fixed: true
+        test:
+            priority: 2
+            run: node --run test

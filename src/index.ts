@@ -1,1 +1,3 @@
-export default () => "Hello world"
+#!/usr/bin/env node
+
+console.log("Hello world")

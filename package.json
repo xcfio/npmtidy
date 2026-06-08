@@ -1,17 +1,25 @@
 {
     "name": "npmtidy",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A CLI tool for cleaning and organizing Node.js projects. Remove unused dependencies, update outdated packages, and keep your package.json tidy",
     "author": "xcfio",
     "homepage": "https://github.com/xcfio/npmtidy#readme",
-    "main": "out/index.js",
+    "type": "module",
     "license": "MIT",
+    "main": "out/index.js",
+    "types": "out/index.d.ts",
+    "engines": {
+        "node": ">=26.2"
+    },
+    "bin": {
+        "npmtidy": "./out/index.js"
+    },
     "scripts": {
-        "fmt": "prettier --config=.prettierrc --write src/",
-        "lint": "prettier --config=.prettierrc --check src/",
-        "build": "(node --eval \"require('node:fs').rmSync('out', { recursive: true, force: true })\" || true) && tsc",
+        "build": "rolldown --config=rolldown.config.ts",
+        "fmt": "prettier --config=.prettierrc --write ./",
+        "fmt:test": "prettier --config=.prettierrc --check ./",
         "test": "tsc --noEmit",
-        "dev": "tsc --watch"
+        "dev": "rolldown --watch --config=rolldown.config.ts"
     },
     "keywords": [
         "tidy",
@@ -23,7 +31,7 @@
     },
     "bugs": {
         "url": "https://github.com/xcfio/npmtidy/issues",
-        "email": "SoftwareXPlus@gmail.com"
+        "email": "omarfaruksxp@gmail.com"
     },
     "funding": {
         "type": "patreon",
@@ -34,9 +42,20 @@
         "tag": "latest"
     },
     "dependencies": {
-        "colorette": "^2.0.20"
+        "@clack/prompts": "^1.5.1",
+        "citty": "^0.2.2",
+        "colorette": "^2.0.20",
+        "semver": "^7.8.2"
     },
     "devDependencies": {
-        "@types/node": "^25.0.0"
+        "@commitlint/config-conventional": "^21.0.2",
+        "@commitlint/format": "^21.0.1",
+        "@commitlint/types": "^21.0.1",
+        "@types/node": "^25.9.2",
+        "@types/semver": "^7.7.1",
+        "commitlint": "^21.0.2",
+        "lefthook": "^2.1.9",
+        "prettier": "^3.8.3",
+        "rolldown": "^1.1.0"
     }
 }
