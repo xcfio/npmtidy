@@ -5,6 +5,8 @@ src/
 .gitignore
 .prettierignore
 .prettierrc
+lefthook.yml
+pnpm*.yaml
 tsconfig.json
 *.test.js
 *.test.d.ts
