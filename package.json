@@ -4,7 +4,7 @@
     "description": "A CLI tool for cleaning and organizing Node.js projects. Remove unused dependencies, update outdated packages, and keep your package.json tidy",
     "author": "xcfio",
     "homepage": "https://github.com/xcfio/npmtidy#readme",
-    "type": "module",
+    "type": "commonjs",
     "license": "MIT",
     "main": "out/index.js",
     "types": "out/index.d.ts",
@@ -12,14 +12,18 @@
         "node": ">=26.2"
     },
     "bin": {
-        "npmtidy": "./out/index.js"
+        "npmtidy": "./out/bin.js"
     },
     "scripts": {
-        "build": "rolldown --config=rolldown.config.ts",
-        "fmt": "prettier --config=.prettierrc --write ./",
-        "fmt:test": "prettier --config=.prettierrc --check ./",
-        "test": "tsc --noEmit",
-        "dev": "rolldown --watch --config=rolldown.config.ts"
+        "build": "tsdown --config=tsdown.config.mts",
+        "clean": "node --eval 'require(`node:fs`).rmSync(`node_modules`, { recursive: true, force: true })'",
+        "dev": "tsdown --watch --config=tsdown.config.mts",
+        "fmt": "prettier --config=.prettierrc --write .",
+        "fmt:test": "prettier --config=.prettierrc --check src",
+        "lint": "oxlint --config=oxlint.config.mts .",
+        "lint:fix": "oxlint --config=oxlint.config.mts --fix .",
+        "preinstall": "npx only-allow pnpm",
+        "test": "tsc --noEmit"
     },
     "keywords": [
         "tidy",
@@ -42,21 +46,28 @@
         "tag": "latest"
     },
     "dependencies": {
-        "@clack/prompts": "^1.5.1",
-        "c12": "^1.11.2",
+        "@clack/prompts": "^1.6.0",
+        "c12": "^4.0.0-beta.5",
         "citty": "^0.2.2",
         "colorette": "^2.0.20",
-        "semver": "^7.8.2"
+        "oxc-parser": "^0.137.0",
+        "pacote": "^22.0.0",
+        "pkg-types": "^2.3.1",
+        "semver": "^7.8.5"
     },
     "devDependencies": {
         "@commitlint/config-conventional": "^21.0.2",
         "@commitlint/format": "^21.0.1",
         "@commitlint/types": "^21.0.1",
-        "@types/node": "^25.9.2",
+        "@types/node": "^26.0.0",
         "@types/semver": "^7.7.1",
         "commitlint": "^21.0.2",
         "lefthook": "^2.1.9",
-        "prettier": "^3.8.3",
-        "rolldown": "^1.1.0"
+        "oxlint": "^1.71.0",
+        "oxlint-plugin-eslint": "^1.71.0",
+        "oxlint-tsgolint": "^0.23.0",
+        "prettier": "^3.8.4",
+        "tsdown": "^0.22.3",
+        "typescript": "^6.0.3"
     }
 }
