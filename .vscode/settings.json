@@ -1,3 +1,4 @@
 {
-    "conventionalCommits.scopes": ["backend", "bot", "frontend", "database", "schema", "test", "utils"]
+    "conventionalCommits.scopes": ["docs", "test", "utils"],
+    "oxc.configPath": "oxlint.config.mts"
 }

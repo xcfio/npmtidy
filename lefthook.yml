@@ -7,7 +7,7 @@ pre-commit:
     commands:
         format:
             priority: 1
-            run: (node --run fmt -- --no-color)
+            run: node --run fmt -- --no-color
             stage_fixed: true
         test:
             priority: 2
