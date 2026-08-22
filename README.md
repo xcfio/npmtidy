@@ -1,4 +1,4 @@
-# npmtidy
+# pkgtidy
 
 A powerful CLI tool and library for cleaning up and organizing your Node.js projects. Automatically removes unused dependencies, identifies outdated packages, cleans up node_modules, and organizes your package.json with consistent formatting. Keep your projects lean, secure, and maintainable with intelligent dependency management and cleanup utilities.
 
@@ -14,4 +14,4 @@ A powerful CLI tool and library for cleaning up and organizing your Node.js proj
 
 **Perfect for:** Developers who want to maintain clean, efficient Node.js projects without the bloat of unnecessary dependencies.
 
-This description positions npmtidy as a comprehensive solution for Node.js project maintenance, which would be valuable for developers dealing with dependency management challenges.
+This description positions pkgtidy as a comprehensive solution for Node.js project maintenance, which would be valuable for developers dealing with dependency management challenges.

@@ -1,9 +1,9 @@
 {
-    "name": "npmtidy",
-    "version": "0.0.2",
+    "name": "pkgtidy",
+    "version": "0.0.1",
     "description": "A CLI tool for cleaning and organizing Node.js projects. Remove unused dependencies, update outdated packages, and keep your package.json tidy",
     "author": "xcfio",
-    "homepage": "https://github.com/xcfio/npmtidy#readme",
+    "homepage": "https://github.com/xcfio/pkgtidy#readme",
     "type": "commonjs",
     "license": "MIT",
     "main": "out/index.js",
@@ -12,7 +12,7 @@
         "node": ">=26.2"
     },
     "bin": {
-        "npmtidy": "./out/bin.js"
+        "pkgtidy": "./out/bin.js"
     },
     "scripts": {
         "build": "tsdown --config=tsdown.config.mts",
@@ -27,14 +27,14 @@
     },
     "keywords": [
         "tidy",
-        "npmtidy"
+        "pkgtidy"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/xcfio/npmtidy"
+        "url": "https://github.com/xcfio/pkgtidy"
     },
     "bugs": {
-        "url": "https://github.com/xcfio/npmtidy/issues",
+        "url": "https://github.com/xcfio/pkgtidy/issues",
         "email": "omarfaruksxp@gmail.com"
     },
     "publishConfig": {
@@ -46,22 +46,22 @@
         "c12": "^4.0.0-beta.5",
         "citty": "^0.2.2",
         "colorette": "^2.0.20",
-        "oxc-parser": "^0.144.0",
+        "oxc-parser": "^0.146.0",
         "pacote": "^22.0.0",
         "pkg-types": "^2.3.1",
         "semver": "^7.8.5"
     },
     "devDependencies": {
-        "@commitlint/config-conventional": "^21.2.0",
-        "@commitlint/format": "^21.2.0",
+        "@commitlint/config-conventional": "^21.2.2",
+        "@commitlint/format": "^21.2.2",
         "@commitlint/types": "^21.2.0",
-        "@types/node": "^26.1.2",
+        "@types/node": "^26.2.0",
         "@types/pacote": "^11.1.8",
-        "@types/semver": "^7.7.1",
-        "commitlint": "^21.2.1",
+        "@types/semver": "^7.8.0",
+        "commitlint": "^21.2.2",
         "lefthook": "^2.1.10",
-        "oxlint": "^1.76.0",
-        "oxlint-plugin-eslint": "^1.76.0",
+        "oxlint": "^1.79.0",
+        "oxlint-plugin-eslint": "^1.79.0",
         "oxlint-tsgolint": "^7.0.2001",
         "prettier": "^3.9.6",
         "tsdown": "^0.22.14",
